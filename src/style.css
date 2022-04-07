@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=VT323&display=swap');
+:root{
+    background-color: #000000;
+    color: white;
+    
+}
+.typing{
+    color: white;
+    font-size: 3em;
+    font-family: 'VT323', monospace;
+}
+div .container{
+    padding-top: 20px;
+    font-family: 'VT323', monospace;
+
+}
+div .input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 80px;
+    font-size: 20px;
+    /* color: #fff; */
+    border-color: #fff;
+    font-family: 'VT323', monospace;
+
+}
+
+button.btn{
+    border-radius: 80px;
+    padding: 10px;
+    margin: 5px;
+    border-color: #fff;
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+
+}
