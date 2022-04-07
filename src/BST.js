@@ -2,12 +2,8 @@
 import { BinarySearchTree, useBinarySearchTree } from "react-tree-vis";
 import { useContext, useState } from "react";
 import "./style.css";
-import Chance from "chance";
 import randomNoGenerator from "simple-random-number-generator";
-import Numbers from "./Numbers";
-import RandomNums from "./RandomNums";
-import InsertContext from "./InsertContext";
-import { render } from "@testing-library/react";
+
 
 function BST() {
   const random = require("simple-random-number-generator");
@@ -18,7 +14,7 @@ function BST() {
   };
   const { ref, insert, search } = useBinarySearchTree();
   const [insertValue, setInsertValue] = useState(0);
-  const [isInsert, setIsInsert] = useState(true);
+
 
 
   var searchValue;
@@ -76,7 +72,6 @@ function BST() {
               
             
             insert(myarr[i])
-            return(myarr)
           
           }
 
