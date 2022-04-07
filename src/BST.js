@@ -7,6 +7,7 @@ import randomNoGenerator from "simple-random-number-generator";
 import Numbers from "./Numbers";
 import RandomNums from "./RandomNums";
 import InsertContext from "./InsertContext";
+import { render } from "@testing-library/react";
 
 function BST() {
   const random = require("simple-random-number-generator");
@@ -68,11 +69,14 @@ function BST() {
               {
                 myarr[i]= random(params)
                 j=0;
+
               }
+    
             }
               
             
             insert(myarr[i])
+            return(myarr)
           
           }
 
@@ -93,8 +97,9 @@ function BST() {
           search(arr[searchValue])
         }}>Show the Winning Number</button>
       </div>
-      <BinarySearchTree ref={ref} treeStyles={{}} />
+      <BinarySearchTree ref={ref} treeStyles={{}}/>
     </div>
+    
   );
   
 }
