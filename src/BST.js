@@ -21,7 +21,8 @@ function BST() {
   let myarr =[];
   var arr;
   var count=1;
-  var count2 =1;
+  var count2 =2;
+  var count3 = 1;
 
   function refreshPage() {
     window.location.reload(false);
@@ -34,16 +35,26 @@ function BST() {
         <h1>Hello Participants Welcome to Techela 7.0</h1>
       </div>
       <div className="typing">
-        <h5>An interesting game based on the concept of Binary Search Tree</h5>
+        <h5>This is An Interesting Game Based On The Concept of Binary Search Tree</h5>
       </div>
       <div>
-        <h3 className="typing">Step 1:</h3>
+        <h3 className="typing">Step 1: The Entered Number will be Inserted into the Binary Search Tree</h3>
         <input className="input" type="number" onChange={(elem) => {
-          setInsertValue(parseInt(elem.currentTarget.value, 10))}} />  
+          setInsertValue(parseInt(elem.currentTarget.value, 10))
+          
+        
+        }
+        } 
+          />  
         <button className='btn' onClick={() => { 
+          if(count3>1)
+          {
+            refreshPage();
+          }
+          count3++
           insert(insertValue) }}>Insert Your Lucky Number</button>
         <br />
-        <h3 className="typing">Step 2:</h3>
+        <h3 className="typing">Step 2: 6 Random Numbers Will be inserted into the Binary Search Tree</h3>
         <button className='btn' onClick={() => {
           
           
@@ -80,20 +91,31 @@ function BST() {
           
         }} padding>Insert Random 6 Numbers</button>
         <br />
-        <h3 className="typing">Step 3:</h3>
+        <h3 className="typing">Step 3: A Random Element From The Tree Will Be Selected. If The Number You Entered Is Selected, An Alert Is Generated</h3>
         <button className='btn' onClick={() => {
 
-          if(count2>1)
+          if(count2<0)
           {
             refreshPage();
           }
+          count2--
           arr = [insertValue, myarr[0], myarr[1], myarr[2], myarr[3], myarr[4], myarr[5]]
           searchValue = Math.floor(Math.random() * arr.length)
           search(arr[searchValue])
+          if(arr[searchValue]===insertValue)
+          {
+            alert("Congratulations! You Win!")
+          }
         }}>Show the Winning Number</button>
+         <BinarySearchTree ref={ref} treeStyles={{}}/>
       </div>
-      <BinarySearchTree ref={ref} treeStyles={{}}/>
+      <div className='bottom'>
+      
+      </div>
+     
+      <br />
     </div>
+    
     
   );
   
